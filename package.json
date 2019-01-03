@@ -1,0 +1,122 @@
+{
+    "name": "react-etp-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --config ./webpack.config.js  --mode development",
+        "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+        "test:unit": "jest --config=test_config/jest.js",
+        "test:coverage": "yarn test:unit --coverage"
+    },
+    "author": "",
+    "license": "ISC",
+    "eslintConfig": {
+        "root": true,
+        "plugins": [
+            "babel"
+        ],
+        "rules": {
+            "no-invalid-this": "off",
+            "jsx-a11y/anchor-is-valid": [
+                "error",
+                {
+                    "components": [
+                        "Link"
+                    ],
+                    "specialLink": [
+                        "to"
+                    ]
+                }
+            ],
+            "jsx-a11y/no-noninteractive-element-interactions": [
+                "error",
+                {
+                    "handlers": [
+                        "onClick",
+                        "onMouseDown",
+                        "onMouseUp",
+                        "onKeyPress",
+                        "onKeyDown",
+                        "onKeyUp"
+                    ]
+                }
+            ]
+        },
+        "extends": "eventbrite-react",
+        "env": {
+            "jest": true,
+            "browser": true,
+            "node": true
+        }
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.4.0",
+        "babel-core": "^6.24.1",
+        "babel-eslint": "7.0.0",
+        "babel-jest": "23.6",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-dynamic-import-webpack": "1.0.1",
+        "babel-plugin-transform-class-properties": "6.23.0",
+        "babel-polyfill": "6.6.1",
+        "babel-preset-env": "1.1.8",
+        "babel-preset-react": "6.23.0",
+        "babel-preset-stage-3": "6.22.0",
+        "css-loader": "^0.28.7",
+        "enzyme": "3.7",
+        "enzyme-adapter-react-15.4": "^1.2.0",
+        "eslint": "^3.0.0",
+        "eslint-config-eventbrite-react": "^5.0.0",
+        "eslint-plugin-babel": "^4.1.2",
+        "eslint-plugin-import": "^2.0.0",
+        "eslint-plugin-jsx-a11y": "^6.0.0",
+        "eslint-plugin-react": "^6.0.0",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "html-webpack-plugin": "^3.2.0",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "22.4",
+        "jest-enzyme": "4.0",
+        "jest-junit": "3.6",
+        "mini-css-extract-plugin": "^0.4.5",
+        "node-sass": "4.10.0",
+        "node-sass-json-importer": "3.0.1",
+        "postcss": "6.0.13",
+        "postcss-cssnext": "3.0.2",
+        "postcss-import": "^12.0.1",
+        "postcss-loader": "2.0.5",
+        "postcss-preset-env": "^6.4.0",
+        "precss": "^4.0.0",
+        "react-addons-test-utils": "15.4",
+        "react-hot-loader": "4.1.2",
+        "sass-loader": "6.0.6",
+        "sass-resources-loader": "2.0.0",
+        "style-loader": "^0.23.1",
+        "sugarss": "^2.0.0",
+        "webpack": "^4.26.0",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.10"
+    },
+    "dependencies": {
+        "axios2": "^0.15.4",
+        "classnames": "2.2.5",
+        "dotenv": "^6.2.0",
+        "eventbrite": "^1.0.3",
+        "eventbrite_design_system": "http://packages.evbops.com:8889/package/eventbrite_design_system/71.0.2",
+        "express": "^4.16.4",
+        "js-utils": "http://packages.evbops.com:8889/package/js-utils/9.1.1",
+        "lodash": "^4.17.11",
+        "prop-types": "^15.6.0",
+        "react": "15.4.2",
+        "react-dom": "15.4.2",
+        "react-redux": "4.4.5",
+        "react-router": "3.0.2",
+        "react-router-redux": "4.0.4",
+        "redux": "3.5.2",
+        "redux-devtools-extension": "2.13.2",
+        "redux-form": "6.2.0",
+        "redux-logger": "3.0.6",
+        "redux-thunk": "2.2.0",
+        "url-lib": "2.0.2",
+        "webpack-dotenv-plugin": "2.1.0"
+    }
+}
